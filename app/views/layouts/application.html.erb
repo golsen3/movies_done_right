@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MoviesDoneRight</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>MoviesDoneRight</title>
+  	<%= stylesheet_link_tag('application.css') %>
+  	<!-- stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> -->
+  	<!-- javascript_include_tag 'application', 'data-turbolinks-track' => true %> -->
+  	<!-- csrf_meta_tags %> -->
+  	<meta charset="utf-8">
 </head>
+
 <body>
 
-<%= yield %>
+	<div class="nav-bar">
+		<h1><%= link_to("Movies Done Right", "home") %></h1>
+		<ul>
+			<li><%= link_to("Home", "home") %></li>
+			<li>About</li>
+			<li>Movies</li>
+			<li><%= link_to("Profile", "profile") %></li>
+			<li><%= link_to("Login", "login") %></li>
+		</ul>
+	</div>
+
+	<div class="profile-side-bar">
+		<img src="profile.jpg" height="75" width="75"></img>
+		<h4>User Name</h6>
+		<ul>
+			<li>Rating</li>
+			<li>Reviews</li>
+		</ul>
+	</div> 
+
+	<div class="content">
+		<%= yield %>
+	</div>
 
 </body>
+
 </html>
+
